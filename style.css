@@ -5,7 +5,7 @@
 }
 
 body {
-	background-color: #e2e7ee;
+  background-color: #e2e7ee;
   font-family: 'Roboto', sans-serif;
   display: flex;
   flex-direction: column;
@@ -16,22 +16,21 @@ body {
   margin: 0;
 }
 
-.container{
+.container {
   display: flex;
   padding: 20px;
   margin: 0 auto;
-  max-width: 100%;  
+  max-width: 100%;
   width: 600px;
-  
 }
 
-aside{
+aside {
   padding: 10px 20px;
   width: 250px;
-  border-right: 1px solid #111
+  border-right: 1px solid #111;
 }
 
-button{
+button {
   display: block;
   cursor: pointer;
   background-color: #fff;
@@ -44,31 +43,32 @@ button{
   font-size: 1;
 }
 
-main{
+main {
   flex: 1;
+  min-width: 350px;
   padding: 10px 20px;
 }
 
-h2{
+h2 {
   border-bottom: 1px solid #111;
   padding-bottom: 10px;
   display: flex;
   justify-content: space-between;
   font-weight: 300;
-  margin: 0 0 20px
+  margin: 0 0 20px;
 }
 
-h3{
+h3 {
   background-color: white;
   border-bottom: 1px solid #111;
   padding: 10px;
   display: flex;
   justify-content: space-between;
   font-weight: 300;
-  margin: 20 0 0px
+  margin: 20 0 0px;
 }
 
-.person{
+.person {
   display: flex;
   justify-content: space-between;
   font-size: 20px;
