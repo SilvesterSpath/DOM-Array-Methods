@@ -23,9 +23,19 @@ async function getRandomUser() {
   addData(newUser);
 }
 
+// Double everyones money
+function doubleMoney() {
+  data = data.map((i) => {
+    return { ...i, money: i.money * 2 };
+  });
+
+  updateDOM();
+}
+
 // Add new obj to data array
 function addData(obj) {
   data.push(obj);
+  console.log(data);
 
   updateDOM();
 }
@@ -53,6 +63,10 @@ function formatMoney(number) {
 // Event listeners
 add_userBtn.addEventListener('click', () => {
   getRandomUser();
+});
+
+doubleBtn.addEventListener('click', () => {
+  doubleMoney();
 });
 
 console.log(data);
