@@ -47,9 +47,21 @@ function sortByRichest() {
   updateDOM(newdata);
 }
 
+// Show only millionaires
 function showMillionaires() {
   data = data.filter((i) => i.money > 1000000);
   updateDOM();
+}
+
+// Calculate entire wealth
+function entireWealth() {
+  const total = data.reduce((acc, i) => (acc += i.money), 0);
+
+  const weatlhEl = document.createElement('div');
+  weatlhEl.innerHTML = `<h3>Total Wealth: <strong>${formatMoney(
+    total
+  )}</strong></h3>`;
+  main.appendChild(weatlhEl);
 }
 
 // Update DOM
@@ -87,6 +99,10 @@ sortBtn.addEventListener('click', () => {
 
 show_millionairesBtn.addEventListener('click', () => {
   showMillionaires();
+});
+
+calculate_wealthBtn.addEventListener('click', () => {
+  entireWealth();
 });
 
 console.log(data);
