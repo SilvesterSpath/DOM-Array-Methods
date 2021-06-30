@@ -40,6 +40,18 @@ function addData(obj) {
   updateDOM();
 }
 
+// Sort by richest
+function sortByRichest() {
+  const newdata = data.sort((a, b) => b.money - a.money);
+
+  updateDOM(newdata);
+}
+
+function showMillionaires() {
+  data = data.filter((i) => i.money > 1000000);
+  updateDOM();
+}
+
 // Update DOM
 function updateDOM(providedData = data) {
   // Clear the main div
@@ -67,6 +79,14 @@ add_userBtn.addEventListener('click', () => {
 
 doubleBtn.addEventListener('click', () => {
   doubleMoney();
+});
+
+sortBtn.addEventListener('click', () => {
+  sortByRichest();
+});
+
+show_millionairesBtn.addEventListener('click', () => {
+  showMillionaires();
 });
 
 console.log(data);
